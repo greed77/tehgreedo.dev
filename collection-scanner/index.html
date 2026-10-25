@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Collection Scanner | Catalog and rate your collections</title>
+    <meta name="description" content="A personal catalog for the things you collect: scan barcodes, rate and log every visit, add photos. No account, and your data stays on your phone.">
+    <link rel="icon" type="image/png" href="/collection-scanner/images/icon.png" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+    <style>
+      /* Only what the theme doesn't already have: the app icon, the screenshot strip and the two download cards. */
+      .ct-hero { display: flex; align-items: center; gap: 2.5em; }
+      .ct-hero .ct-icon { flex: 0 0 auto; width: 9em; height: 9em; border-radius: 22%; box-shadow: 0 0.75em 2em rgba(0, 0, 0, 0.35); }
+      .ct-hero h1 { margin-bottom: 0.25em; }
+      .ct-badge { display: inline-block; margin-bottom: 1.25em; padding: 0.2em 0.9em; border-radius: 2em; background: rgba(255, 255, 255, 0.15); font-size: 0.8em; letter-spacing: 0.05em; text-transform: uppercase; }
+      .ct-shots { display: flex; gap: 1.5em; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0.5em 0.25em 1.5em; margin: 0 -0.25em; }
+      .ct-shots figure { flex: 1 0 10em; max-width: 14em; margin: 0; scroll-snap-align: start; }
+      .ct-shots img { display: block; width: 100%; height: auto; border-radius: 1.25em; box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.35); }
+      .ct-shots figcaption { margin-top: 0.75em; font-size: 0.85em; text-align: center; opacity: 0.8; }
+      .ct-get { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2em; }
+      .ct-get .box { margin: 0; }
+      .ct-get h3 .icon { margin-right: 0.4em; }
+      .ct-more { margin-top: 2.5em; }
+      .ct-links { margin: 0; padding: 0; list-style: none; }
+      .ct-links li { display: inline-block; margin-right: 1.5em; padding-left: 0; }
+      @media screen and (max-width: 736px) {
+        .ct-hero { flex-direction: column; align-items: flex-start; gap: 1.5em; }
+        .ct-hero .ct-icon { width: 6em; height: 6em; }
+        .ct-shots figure { flex-basis: 11em; }
+        .ct-get { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+<body class="is-preload">
+
+<!-- Header -->
+<header id="header">
+  <a href="/index.html" class="title">tehgreedo.dev</a>
+  <nav>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/collection-scanner/" class="active">Collection Scanner</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+  <!-- Intro -->
+  <section id="intro" class="wrapper style1 fade-up">
+    <div class="inner">
+      <div class="ct-hero">
+        <img class="ct-icon" src="/collection-scanner/images/icon.png" alt="Collection Scanner app icon: a white barcode in a scanning frame on purple" />
+        <div>
+          <span class="ct-badge">Android · in closed testing on Google Play</span>
+          <h1>Collection Scanner</h1>
+          <p>Catalog and rate your collections: scan barcodes, log entries, add photos.<br />
+          A personal catalog for the things you collect, and a history of what you thought of them.</p>
+          <ul class="actions">
+            <li><a href="#get" class="button primary scrolly">Get the app</a></li>
+            <li><a href="#screenshots" class="button scrolly">See it</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section id="screenshots" class="wrapper style2 fade-up">
+    <div class="inner">
+      <h2>See it</h2>
+      <div class="ct-shots">
+        <figure>
+          <img src="/collection-scanner/images/01-collections.png" alt="The collections screen, with collections for energy drinks, snacks, Lego sets and puzzles" loading="lazy" width="1080" height="1920" />
+          <figcaption>Collections for anything</figcaption>
+        </figure>
+        <figure>
+          <img src="/collection-scanner/images/02-items-with-ratings.png" alt="An Energy Drinks collection, each item with its star rating and number of entries" loading="lazy" width="1080" height="1920" />
+          <figcaption>Ratings at a glance</figcaption>
+        </figure>
+        <figure>
+          <img src="/collection-scanner/images/03-item-detail.png" alt="An item's detail screen, with its barcode, average rating and log entries" loading="lazy" width="1080" height="1920" />
+          <figcaption>Every item's history</figcaption>
+        </figure>
+        <figure>
+          <img src="/collection-scanner/images/04-merge-duplicates.png" alt="The merge dialog, picking a duplicate item to fold into this one" loading="lazy" width="1080" height="1920" />
+          <figcaption>Merge duplicates</figcaption>
+        </figure>
+        <figure>
+          <img src="/collection-scanner/images/05-add-log-entry.png" alt="Adding a log entry: a star rating, the date, notes and photos" loading="lazy" width="1080" height="1920" />
+          <figcaption>Log each time you try it</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="wrapper style3 fade-up">
+    <div class="inner">
+      <h2>What it does</h2>
+      <div class="features">
+        <section>
+          <span class="icon solid major fa-layer-group"></span>
+          <h3>Collections for anything</h3>
+          <p>Energy drinks, Lego sets, puzzles, snacks, or your own categories. An item can sit in more than one collection.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-barcode"></span>
+          <h3>Scan to add</h3>
+          <p>Scan a barcode to add an item, or enter it by hand. Food and drinks fill in their name and brand from Open Food Facts. Rescanning something you have takes you straight to it.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-star-half-alt"></span>
+          <h3>Rate and log</h3>
+          <p>Log an entry each time you revisit an item, with a half-star rating, notes and a date. See the average rating, last rating and entry count at a glance.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-camera"></span>
+          <h3>Photos</h3>
+          <p>Attach photos to an item itself, or to a single log entry.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-search"></span>
+          <h3>Find anything</h3>
+          <p>Sort and filter by name, rating, date added or last logged, and search one collection or your whole catalog.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-lock"></span>
+          <h3>Your data stays on your phone</h3>
+          <p>No account and no cloud sync. Back up and restore everything, photos included, as a JSON or ZIP file.</p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get it -->
+  <section id="get" class="wrapper style1 fade-up">
+    <div class="inner">
+      <h2>Get the app</h2>
+      <div class="ct-get">
+        <div class="box">
+          <h3><span class="icon brands fa-google-play"></span>Google Play: closed testing</h3>
+          <p>Collection Scanner is in closed testing on Google Play, ahead of a public release. Testers get updates automatically from the Play Store.</p>
+          <p>Want to help test it? Email me with the Google account you use on your phone, and I'll add you to the tester list.</p>
+          <ul class="actions">
+            <li><a href="mailto:appsupport@tehgreedo.dev?subject=Collection%20Scanner%20testing" class="button primary">Ask to test</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3><span class="icon solid fa-download"></span>Download the APK</h3>
+          <p>Every release is also published as an APK you can install directly. Download the latest from the releases page and open it on your phone.</p>
+          <p>Your collections live only on your phone, so uninstalling deletes them. To switch between the Play version and the APK, export a backup first, then restore it after reinstalling.</p>
+          <ul class="actions">
+            <li><a href="https://code.reedpeople.com/tehgreedo/collection_scanner/releases" class="button">Releases</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="ct-more">More</h3>
+      <ul class="ct-links">
+        <li><a href="/collection-scanner/privacy.html">Privacy policy</a></li>
+        <li><a href="https://code.reedpeople.com/tehgreedo/collection_scanner">Source code</a></li>
+        <li><a href="mailto:appsupport@tehgreedo.dev?subject=Collection%20Scanner">appsupport@tehgreedo.dev</a></li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<!-- Footer -->
+<footer id="footer" class="wrapper style1-alt">
+  <div class="inner">
+    <ul class="menu">
+      <li>&copy; 2026 tehgreedo.dev. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.scrollex.min.js"></script>
+<script src="/assets/js/jquery.scrolly.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
