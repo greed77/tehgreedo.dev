@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chore Tracker | Share the chores with your family</title>
+    <meta name="description" content="A shared chore list for families: see what's due, who's doing it, and what's been done. Free, open source, no ads or tracking.">
+    <link rel="icon" type="image/png" href="/chore-tracker/images/icon.png" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+    <style>
+      /* Only what the theme doesn't already have: the app icon, the screenshot strip and the two download cards. */
+      .ct-hero { display: flex; align-items: center; gap: 2.5em; }
+      .ct-hero .ct-icon { flex: 0 0 auto; width: 9em; height: 9em; border-radius: 22%; box-shadow: 0 0.75em 2em rgba(0, 0, 0, 0.35); }
+      .ct-hero h1 { margin-bottom: 0.25em; }
+      .ct-badge { display: inline-block; margin-bottom: 1.25em; padding: 0.2em 0.9em; border-radius: 2em; background: rgba(255, 255, 255, 0.15); font-size: 0.8em; letter-spacing: 0.05em; text-transform: uppercase; }
+      .ct-shots { display: flex; gap: 1.5em; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0.5em 0.25em 1.5em; margin: 0 -0.25em; }
+      .ct-shots figure { flex: 1 0 10em; max-width: 14em; margin: 0; scroll-snap-align: start; }
+      .ct-shots img { display: block; width: 100%; height: auto; border-radius: 1.25em; box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.35); }
+      .ct-shots figcaption { margin-top: 0.75em; font-size: 0.85em; text-align: center; opacity: 0.8; }
+      .ct-get { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2em; }
+      .ct-get .box { margin: 0; }
+      .ct-get h3 .icon { margin-right: 0.4em; }
+      .ct-more { margin-top: 2.5em; }
+      .ct-links { margin: 0; padding: 0; list-style: none; }
+      .ct-links li { display: inline-block; margin-right: 1.5em; padding-left: 0; }
+      @media screen and (max-width: 736px) {
+        .ct-hero { flex-direction: column; align-items: flex-start; gap: 1.5em; }
+        .ct-hero .ct-icon { width: 6em; height: 6em; }
+        .ct-shots figure { flex-basis: 11em; }
+        .ct-get { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+<body>
+
+<!-- Header -->
+<header id="header">
+  <a href="/index.html" class="title">tehgreedo.dev</a>
+  <nav>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/chore-tracker/" class="active">Chore Tracker</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+  <!-- Intro -->
+  <section id="intro" class="wrapper style1 fade-up">
+    <div class="inner">
+      <div class="ct-hero">
+        <img class="ct-icon" src="/chore-tracker/images/icon.png" alt="Chore Tracker app icon: a white check mark on green" />
+        <div>
+          <span class="ct-badge">Android · in closed testing on Google Play</span>
+          <h1>Chore Tracker</h1>
+          <p>Share the chores with your family, and always know what's due.<br />
+          One shared list on everyone's phone: what needs doing, who's doing it, and what's been done.</p>
+          <ul class="actions">
+            <li><a href="#get" class="button primary scrolly">Get the app</a></li>
+            <li><a href="#screenshots" class="button scrolly">See it</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section id="screenshots" class="wrapper style2 fade-up">
+    <div class="inner">
+      <h2>See it</h2>
+      <div class="ct-shots">
+        <figure>
+          <img src="/chore-tracker/images/01-chore-list.png" alt="The chore list, with overdue and due-today chores at the top" loading="lazy" width="1080" height="2160" />
+          <figcaption>What's due, most urgent first</figcaption>
+        </figure>
+        <figure>
+          <img src="/chore-tracker/images/02-subtasks.png" alt="A Laundry chore split into one load per person, two of four done" loading="lazy" width="1080" height="2160" />
+          <figcaption>Split big jobs into parts</figcaption>
+        </figure>
+        <figure>
+          <img src="/chore-tracker/images/03-history.png" alt="A chore's history, showing who vacuumed and when" loading="lazy" width="1080" height="2160" />
+          <figcaption>See who did what, and when</figcaption>
+        </figure>
+        <figure>
+          <img src="/chore-tracker/images/04-household.png" alt="The household screen, with its members and invite code" loading="lazy" width="1080" height="2160" />
+          <figcaption>Invite family with a code</figcaption>
+        </figure>
+        <figure>
+          <img src="/chore-tracker/images/05-new-chore.png" alt="Adding a new chore with a room, schedule and assignee" loading="lazy" width="1080" height="2160" />
+          <figcaption>Every chore, its own schedule</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="wrapper style3 fade-up">
+    <div class="inner">
+      <h2>What it does</h2>
+      <div class="features">
+        <section>
+          <span class="icon solid major fa-users"></span>
+          <h3>Shared with your family</h3>
+          <p>Create a household and invite your family with a six-letter code. Everyone sees the same list, and it updates as soon as someone checks a chore off.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-calendar-check"></span>
+          <h3>Always know what's due</h3>
+          <p>Every few days, weeks or months, on set days of the week, just when needed, or just once. Overdue and due-today chores come first, colour-coded.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-tasks"></span>
+          <h3>Split the big jobs</h3>
+          <p>Break a chore into parts, like one load of laundry per person, and give each part to someone. The chore is done when every part is.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-history"></span>
+          <h3>Who did what</h3>
+          <p>Assign chores, filter to just yours, and look back at any chore's history. Forgot to check something off? Log it for the day it happened.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-forward"></span>
+          <h3>Flexible when life happens</h3>
+          <p>Skip a week without pretending it was done, pin a chore to the top, or let "Surprise me" pick what to do next.</p>
+        </section>
+        <section>
+          <span class="icon solid major fa-lock"></span>
+          <h3>No ads, no tracking</h3>
+          <p>No ads, no analytics, nothing sold. It's open source, and you can delete your account at any time from Settings.</p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get it -->
+  <section id="get" class="wrapper style1 fade-up">
+    <div class="inner">
+      <h2>Get the app</h2>
+      <div class="ct-get">
+        <div class="box">
+          <h3><span class="icon brands fa-google-play"></span>Google Play: closed testing</h3>
+          <p>Chore Tracker is in closed testing on Google Play, ahead of a public release. Testers get updates automatically from the Play Store.</p>
+          <p>Want to help test it? Email me with the Google account you use on your phone, and I'll add you to the tester list.</p>
+          <ul class="actions">
+            <li><a href="mailto:android@tehgreedo.dev?subject=Chore%20Tracker%20testing" class="button primary">Ask to test</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3><span class="icon solid fa-download"></span>Download the APK</h3>
+          <p>Every release is also published as an APK you can install directly. Download the latest from the releases page and open it on your phone.</p>
+          <p>The APK is signed differently from the Play version, so to switch from one to the other, uninstall first. Your chores are stored online, so you won't lose anything.</p>
+          <ul class="actions">
+            <li><a href="https://code.reedpeople.com/tehgreedo/android_chore_tracker/releases" class="button">Releases</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="ct-more">More</h3>
+      <ul class="ct-links">
+        <li><a href="/chore-tracker/privacy.html">Privacy policy</a></li>
+        <li><a href="/chore-tracker/delete-account.html">Delete your account</a></li>
+        <li><a href="https://code.reedpeople.com/tehgreedo/android_chore_tracker">Source code</a></li>
+        <li><a href="mailto:android@tehgreedo.dev?subject=Chore%20Tracker">android@tehgreedo.dev</a></li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<!-- Footer -->
+<footer id="footer" class="wrapper style1-alt">
+  <div class="inner">
+    <ul class="menu">
+      <li>&copy; 2026 tehgreedo.dev. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.scrollex.min.js"></script>
+<script src="/assets/js/jquery.scrolly.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
